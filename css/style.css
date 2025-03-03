@@ -38,6 +38,29 @@ img {
     }
 }    
 
+/* START MAIN */
+
+.enter {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 592px;
+    top: 51px;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    background-color: rgb(200, 102, 66);
+    border-radius: 10px;
+    border: 10px solid rgb(203, 186, 186);
+    color: rgb(203, 186, 186);
+}
+
+.enter p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 footer {
     font-family: "Sixtyfour Convergence", serif;
     width: 100%;
