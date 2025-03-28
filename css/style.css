@@ -1,72 +1,36 @@
-
-body {
-    background-image: url(https://cdn.shopify.com/s/files/1/0688/8590/5693/products/BlackTexturedBrick_Pattern.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-header {
-    display: flex;
-    justify-content: space-around;
-    font-family: "Sixtyfour Convergence", serif;
-    
-}
-
-li {
-    display: inline;
-    padding: 10px;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-
-    animation-name: spin;
-    animation-duration: 5000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; 
-}
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}    
-
-/* START MAIN */
-
-.enter {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: 592px;
-    top: 51px;
-    align-items: center;
-    width: 400px;
-    height: 400px;
-    margin: 0;
-    background-color: rgb(200, 102, 66);
-    border-radius: 10px;
-    border: 10px solid rgb(203, 186, 186);
-    color: rgb(203, 186, 186);
-}
-
-.enter p {
-    font-size: 30px;
+/* CAT ANIMATION */
+.motivationalText {
+    font-style: italic;
     font-weight: bold;
+    letter-spacing: 1px;
+    font-size: larger;
+    color: rgb(64, 63, 63);
 }
 
-footer {
-    font-family: "Sixtyfour Convergence", serif;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    bottom: 0;
+.catAnimation {
     text-align: center;
 }
 
+.catHead {
+    position: absolute;
+    filter: drop-shadow(20px 7px 20px lightgrey);
+    animation: peekaboo 4s ease-in-out infinite;
+}
+
+.table {
+    position: relative;
+    width: 16rem;
+    filter: drop-shadow(20px 7px 5px lightgrey);
+}
+
+span {
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    @keyframes peekaboo {
+        0% { bottom: 65%; } /* Starting position - mostly hidden */
+        50% { bottom: 65.5%; } /* Peek up position - more visible */
+        100% { bottom: 65%; } /* Back to mostly hidden */
+    }
+}
